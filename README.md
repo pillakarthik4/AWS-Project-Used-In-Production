@@ -15,13 +15,18 @@ The server can connect to the internet by using NAT gateway .
 
 ![Screenshot (12)](https://github.com/pillakarthik4/AWS-Project-Used-In-Production/assets/130967802/d9383b87-3693-4a71-aef5-e8adfcc74e69)
 
+
+
 **Created Autoscaling group with Launch template with 2 private subnets.  2 Instances are created in EC2.
 And created Boston-Host to instance to communicate with 2 instances created by Autoscaling group.**
 
+
+
 ![Screenshot (13)](https://github.com/pillakarthik4/AWS-Project-Used-In-Production/assets/130967802/ebbfc26a-cd8b-4977-b00d-11b7cc38c453)
 
-**Created Loadbalancer with target group for private subnet instance to communicate with internet.
-Load Balancer placed iN public Subnets.**
+//**Created Loadbalancer with target group for private subnet instance to communicate with internet.
+Load Balancer placed iN public Subnets.**//
+
 
 In the terminal copied the Pem.file to the local to the remote machine of the Boston host instance using the commands below :
 
@@ -142,6 +147,18 @@ ubuntu@ip-10-0-129-14:~$ python3 -m http.server 8000
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 10.0.2.77 - - [10/Aug/2023 07:45:48] "GET / HTTP/1.1" 200 -
 10.0.28.97 - - [10/Aug/2023 07:45:51] "GET / HTTP/1.1" 200 -
+
+
+//In one private subnet instance created index.html file ://
+
+With Load Blancer internet traffic will communicate with private subnet instance.
+
+
+
+![Uploading Screenshot (14).png…]()
+
+
+
 
 
 
